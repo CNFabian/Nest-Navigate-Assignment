@@ -1,0 +1,400 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-risd_blue to-risd_blue-600 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold hover:from-risd_blue-700 hover:to-risd_blue-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95 text-sm sm:text-base;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:shadow-xl border border-gray-100;
+  }
+
+.quiz-option {
+  @apply w-full p-3 sm:p-4 text-left rounded-lg border-2 transition-all duration-200 transform hover:scale-101 hover:shadow-md text-sm sm:text-base;
+}
+
+  .quiz-option:not(:disabled):hover {
+    @apply border-risd_faded bg-risd_blue-50 translate-y-[-1px] scale-102;
+  }
+
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-3 overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply bg-gradient-to-r from-mindaro to-risd_faded h-3 rounded-full transition-all duration-700 ease-out;
+  }
+
+  .coin-display {
+    @apply flex items-center space-x-2 bg-selective_yellow-50 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 hover:bg-selective_yellow-100 hover:scale-105 border border-selective_yellow-200;
+  }
+
+  .lesson-item {
+    @apply flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-gray-50 rounded-lg text-left transition-all duration-300 hover:bg-risd_blue-50 hover:shadow-md transform hover:translate-y-[-2px] border border-gray-100;
+  }
+
+  .lesson-badge {
+    @apply w-6 h-6 rounded-full flex items-center justify-center text-sm transition-all duration-300;
+  }
+
+  .lesson-badge.correct {
+    @apply bg-mindaro text-neutral_dark animate-pulse;
+  }
+
+  .lesson-badge.completed {
+    @apply bg-selective_yellow text-neutral_dark;
+  }
+
+  .lesson-badge.pending {
+    @apply bg-gray-300;
+  }
+
+  .feedback-box {
+    @apply mt-4 p-4 rounded-lg transition-all duration-500 ease-out;
+  }
+
+  .feedback-box.correct {
+    @apply bg-mindaro-50 border-2 border-mindaro-300 animate-slideInUp;
+  }
+
+  .feedback-box.incorrect {
+    @apply bg-persian_red-50 border-2 border-persian_red-300 animate-slideInUp;
+  }
+
+  .completion-icon {
+    @apply w-20 h-20 bg-mindaro-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce;
+  }
+
+  .nav-button {
+    @apply text-risd_blue hover:text-risd_blue-700 transition-colors duration-200 hover:underline;
+  }
+
+  .loading-spinner {
+    @apply inline-block w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin;
+  }
+
+  .alert-section {
+    @apply bg-persian_red-50 border-2 border-persian_red-200 text-persian_red-800 p-4 rounded-lg;
+  }
+
+  .success-section {
+    @apply bg-mindaro-50 border-2 border-mindaro-200 text-mindaro-900 p-4 rounded-lg;
+  }
+
+  .neutral-section {
+    @apply bg-gray-50 border border-gray-200 text-neutral_dark p-4 rounded-lg;
+  }
+
+  .faded-primary-section {
+    @apply bg-risd_blue-50 border-2 border-risd_faded p-4 rounded-lg;
+  }
+
+  .faded-yellow-section {
+    @apply bg-selective_yellow-50 border-2 border-yellow_faded p-4 rounded-lg;
+  }
+
+  .ranking-section {
+    background-color: #FDB212 !important;
+  }
+  
+  .ranking-section * {
+    color: #FFFFFF !important;
+  }
+  
+  .ranking-section .rank-name {
+    color: #FAFAFA !important;
+  }
+  
+  .ranking-section .rank-description {
+    color: #F8F8FF !important;
+    opacity: 0.9;
+  }
+  
+  .ranking-section .coin-info {
+    color: #F5F5F5 !important;
+  }
+  
+  .ranking-section .achievement-text {
+    color: #FFFFFF !important;
+  }
+  
+  .ranking-section .view-ranks-btn {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .ranking-section .view-ranks-btn:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+@layer utilities {
+  .animate-slideInUp {
+    animation: slideInUp 0.5s ease-out;
+  }
+
+  .animate-slideInDown {
+    animation: slideInDown 0.5s ease-out;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slideInLeft {
+    animation: slideInLeft 0.4s ease-out;
+  }
+
+  .animate-slideInRight {
+    animation: slideInRight 0.4s ease-out;
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-confetti-fall {
+    animation: confettiFall 3s ease-out forwards;
+  }
+
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+
+  .group:hover .group-hover\:animate-wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(55, 88, 237, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(55, 88, 237, 0.6);
+  }
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  .card {
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  .page-transition {
+    animation: fadeIn 0.4s ease-out;
+  }
+}
+
+.stagger-animation > * {
+  opacity: 0;
+  animation: slideInUp 0.5s ease-out forwards;
+}
+
+.stagger-animation > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stagger-animation > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stagger-animation > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stagger-animation > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.stagger-animation > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@media (max-width: 640px) {
+  .quiz-option {
+    @apply min-h-[60px] text-base;
+  }
+  
+  .btn-primary {
+    @apply min-h-[48px];
+  }
+  
+  .card {
+    @apply mx-2;
+  }
+  
+  .lesson-item {
+    @apply flex-col sm:flex-row space-x-0 sm:space-x-4 space-y-2 sm:space-y-0 text-center sm:text-left;
+  }
+  
+  .completion-icon {
+    @apply w-16 h-16 sm:w-20 sm:h-20;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+   .hover\:scale-101:hover {
+    transform: scale(0.25rem);
+  }
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  .quiz-option:hover {
+    transform: none;
+  }
+  
+  .quiz-option:active {
+    transform: scale(0.98);
+    background-color: rgba(55, 88, 237, 0.1);
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-bounce,
+  .animate-float,
+  .animate-wiggle {
+    animation: none;
+  }
+}

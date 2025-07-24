@@ -1,0 +1,82 @@
+Nest Navigate - Learning Module
+A gamified learning platform for first-time homebuyers built with React and Tailwind CSS. This interactive educational application teaches essential homebuying concepts through engaging lessons, quizzes, and progress tracking.
+
+🚀 Live Demo
+View Live Application
+
+📋 Project Overview
+Nest Navigate is an interactive learning module focused on "Understanding Home Inspections" - a critical topic for first-time homebuyers. The application features a comprehensive learning experience with gamification elements to enhance user engagement and knowledge retention.
+
+Key Features
+Interactive Learning Experience: 3 comprehensive lessons about home inspections
+Gamification Elements: Coin rewards, progress tracking, and achievement system
+Responsive Design: Mobile-first approach with seamless tablet and desktop experiences
+Progress Persistence: Local storage saves user progress across sessions
+Modern UI/UX: Clean, accessible design with smooth animations and transitions
+
+🛠 Technology Stack
+Frontend Framework: React 18.2.0
+Build Tool: Vite 4.4.5
+Styling: Tailwind CSS 3.4.17
+Icons: Lucide React 0.525.0
+State Management: React Hooks (useState, useEffect)
+Deployment: Vercel
+
+📱 Features
+
+Core Learning Modules
+Lesson 1: What is a Home Inspection?
+Lesson 2: Types of Inspections
+Lesson 3: Red Flags to Watch For
+
+Interactive Elements
+Multiple choice quizzes with instant feedback
+Progress tracking and completion percentages
+Coin reward system (15 coins per correct answer)
+Achievement badges and ranking system
+
+User Experience
+Smooth page transitions and animations
+Mobile-responsive design
+Accessibility features with proper ARIA labels
+SEO-optimized with structured data
+
+Gamification
+Real-time coin counter
+Progress visualization
+Achievement ranking system (House Hunter → Property Mogul)
+Celebration animations for course completion
+
+🏗 Project Structure
+src/
+├── components/
+│   ├── Views/
+│   │   ├── HomeView.jsx
+│   │   ├── CoursesView.jsx
+│   │   ├── LessonView.jsx
+│   │   ├── CompletionView.jsx
+│   │   ├── AssessmentsView.jsx
+│   │   └── SkillGraphView.jsx
+│   ├── Header.jsx
+│   ├── Sidebar.jsx
+│   └── RankingSection.jsx
+├── data/
+│   └── lessonData.js
+├── assets/
+├── App.jsx
+├── main.jsx
+└── index.css
+
+Progressive Disclosure: Information is revealed step-by-step to avoid overwhelming users
+Immediate Feedback: Quiz answers provide instant feedback with explanations
+Progress Visualization: Multiple progress indicators help users understand their journey
+
+Technical Architecture
+
+Component-Based Design: Modular React components for maintainability
+State Management: Centralized state with React hooks for simplicity
+Responsive First: Mobile-first CSS with Tailwind's responsive utilities
+Performance: Optimized with Vite for fast development and builds
+
+Time Spent: Approximately 6-8 hours
+Focus Areas: Clean code architecture, responsive design, user experience, and gamification elements

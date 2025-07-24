@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Nest Navigate - Home Inspections Learning Module | Interactive Education for Homebuyers</title>
+    <meta name="title" content="Nest Navigate - Home Inspections Learning Module | Interactive Education for Homebuyers" />
+    <meta name="description" content="Learn the essentials of home inspections through our interactive, gamified learning platform. Master home inspection basics, earn coins, and make informed homebuying decisions with confidence." />
+    <meta name="keywords" content="home inspection, real estate education, first-time homebuyers, interactive learning, gamified education, property inspection, homebuying guide" />
+    <meta name="author" content="Cher® - Nest Navigate" />
+    <meta name="robots" content="index, follow" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nest-navigate-learning.vercel.app/" />
+    <meta property="og:title" content="Nest Navigate - Home Inspections Learning Module" />
+    <meta property="og:description" content="Interactive learning platform for first-time homebuyers to understand home inspections. Gamified education with progress tracking and real-world knowledge." />
+    <meta property="og:image" content="https://nest-navigate-learning.vercel.app/og-image.png" />
+    <meta property="og:site_name" content="Nest Navigate" />
+    <meta property="og:locale" content="en_US" />
+    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nest-navigate-learning.vercel.app/" />
+    <meta property="twitter:title" content="Nest Navigate - Home Inspections Learning Module" />
+    <meta property="twitter:description" content="Interactive learning platform for first-time homebuyers to understand home inspections. Gamified education with progress tracking and real-world knowledge." />
+    <meta property="twitter:image" content="https://nest-navigate-learning.vercel.app/twitter-image.png" />
+    <meta property="twitter:creator" content="@NestNavigate" />
+    
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Nest Navigate" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Nest Navigate",
+      "description": "Interactive learning platform for first-time homebuyers",
+      "url": "https://nest-navigate-learning.vercel.app/",
+      "sameAs": [
+        "https://cher.app"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Home Inspection Learning Modules",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": "Understanding Home Inspections",
+            "description": "Learn the essentials of home inspections through interactive lessons",
+            "provider": {
+              "@type": "Organization",
+              "name": "Nest Navigate"
+            },
+            "educationalLevel": "Beginner",
+            "timeRequired": "PT15M",
+            "inLanguage": "en-US",
+            "courseMode": "online",
+            "isAccessibleForFree": true
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const skipLink = document.createElement('a');
+        skipLink.href = '#main-content';
+        skipLink.textContent = 'Skip to main content';
+        skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50';
+        document.body.insertBefore(skipLink, document.body.firstChild);
+        
+        const root = document.getElementById('root');
+        if (root && !root.querySelector('#main-content')) {
+          root.setAttribute('id', 'main-content');
+        }
+      });
+    </script>
+  </body>
+</html>
