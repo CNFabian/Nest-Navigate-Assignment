@@ -4,7 +4,7 @@ A gamified learning platform for first-time homebuyers built with React and Tail
 
 ## 🚀 Live Demo
 
-**[View Live Application](https://nest-navigate-learning.vercel.app/)**
+**[View Live Application](https://nest-navigate-assignment.vercel.app/)**
 
 ## 📋 Project Overview
 
