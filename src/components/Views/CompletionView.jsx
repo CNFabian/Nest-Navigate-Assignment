@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Trophy, Star, CheckCircle, BarChart3, RotateCcw, Trash2, Save, Home, BookOpen, AlertTriangle, ArrowLeft } from 'lucide-react'
 import Header from '../Header'
-import { lessonData } from '../../data/lessonData.js'
+import { lessonData } from '../../data/lessonData'
 
 const CompletionView = ({ 
   goToOverview, 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { CheckCircle, X, HelpCircle, AlertTriangle } from 'lucide-react'
 import Header from '../Header'
-import { lessonData } from '../../data/lessonData.js'
+import { lessonData } from '../../data/lessonData'
 
 const LessonView = ({ 
   coins, 
