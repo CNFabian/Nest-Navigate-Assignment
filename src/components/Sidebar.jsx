@@ -12,7 +12,7 @@ const Sidebar = ({ activeTab, setActiveTab, onLogoClick, coins = 0, completedLes
       setIsMobile(window.innerWidth < 1024);
     };
     
-    checkMobile();
+    checkMobile(); 
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
