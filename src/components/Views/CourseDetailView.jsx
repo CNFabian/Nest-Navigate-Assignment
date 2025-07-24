@@ -1,6 +1,6 @@
 import React from 'react';
 import { Book, Clock, BarChart3, Tag, CheckCircle, AlertTriangle, Trophy, Target } from 'lucide-react';
-import { lessonData } from '../../data/lessonData';
+import { lessonData } from '../../data/lessonData.js';
 
 const CourseDetailView = ({ courseId, coins, completedLessons, correctAnswers, startModule, resetProgress, goBackToCourses }) => {
   const courseDetails = {
