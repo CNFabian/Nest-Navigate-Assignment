@@ -8,7 +8,7 @@ import AssessmentsView from './components/Views/AssessmentsView'
 import SkillGraphView from './components/Views/SkillGraphView'
 import LessonView from './components/Views/LessonView'
 import CompletionView from './components/Views/CompletionView'
-import { lessonData } from './data/lessonData.js'
+import { lessonData } from './data/lessonData'
 
 function App() {
   const [activeTab, setActiveTab] = useState('home')
