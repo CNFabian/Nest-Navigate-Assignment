@@ -199,26 +199,26 @@ const LessonContent = ({
             {lesson.title}
           </h2>
           
-          <div className="flex items-center justify-center sm:justify-end">
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12">
-              <svg className="w-10 h-10 sm:w-12 sm:h-12 transform -rotate-90">
+          <div className="flex items-center">
+            <div className="relative w-12 h-12">
+              <svg className="w-12 h-12 transform -rotate-90" viewBox="0 0 48 48">
                 <circle
-                  cx={isSidebar ? "20" : "24"}
-                  cy={isSidebar ? "20" : "24"}
-                  r={isSidebar ? "16" : "20"}
+                  cx="24"
+                  cy="24"
+                  r="20"
                   stroke="#e5e7eb"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   fill="none"
                 />
                 <circle
-                  cx={isSidebar ? "20" : "24"}
-                  cy={isSidebar ? "20" : "24"}
-                  r={isSidebar ? "16" : "20"}
+                  cx="24"
+                  cy="24"
+                  r="20"
                   stroke="#3758ED"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   fill="none"
-                  strokeDasharray={`${2 * Math.PI * (isSidebar ? 16 : 20)}`}
-                  strokeDashoffset={`${2 * Math.PI * (isSidebar ? 16 : 20) * (1 - currentLesson / 3)}`}
+                  strokeDasharray={`${2 * Math.PI * 20}`}
+                  strokeDashoffset={`${2 * Math.PI * 20 * (1 - currentLesson / 3)}`}
                   strokeLinecap="round"
                   className="transition-all duration-500 ease-out"
                 />
