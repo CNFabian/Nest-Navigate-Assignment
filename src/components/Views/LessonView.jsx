@@ -169,6 +169,48 @@ const LessonContent = ({
 
   const animationClass = isSidebar ? "" : "animate-slideInDown"
 
+  const renderContent = (content) => {
+    return content.map((section, index) => {
+      switch (section.type) {
+        case 'heading':
+          return (
+            <h3 key={index} className="text-lg font-bold text-gray-800 mt-6 mb-3 first:mt-0">
+              {section.text}
+            </h3>
+          );
+        case 'subheading':
+          return (
+            <h4 key={index} className="text-base font-semibold text-gray-700 mt-4 mb-2">
+              {section.text}
+            </h4>
+          );
+        case 'paragraph':
+          return (
+            <p 
+              key={index} 
+              className={`text-sm sm:text-base text-gray-700 leading-relaxed mb-4 ${
+                section.highlight ? 'bg-blue-50 p-3 rounded-lg border-l-4 border-blue-400 font-medium' : ''
+              }`}
+            >
+              {section.text}
+            </p>
+          );
+        case 'list':
+          return (
+            <ul key={index} className="list-disc list-inside space-y-2 mb-4 ml-4">
+              {section.items.map((item, itemIndex) => (
+                <li key={itemIndex} className="text-sm sm:text-base text-gray-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          );
+        default:
+          return null;
+      }
+    });
+  };
+
   return (
     <>
       <div className={containerClass}>
@@ -250,9 +292,7 @@ const LessonContent = ({
         </div>
           
           <div className="prose prose-sm sm:prose-lg flex-1">
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-              {lesson.content}
-            </p>
+            {renderContent(lesson.content)}
           </div>
         </div>
       </div>
