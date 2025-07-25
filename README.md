@@ -129,7 +129,7 @@ src/
 - **Achievement Focus**: Emphasized completion and accuracy over speed to encourage thoughtful learning
 
 ### Content Assumptions
-- **Lesson Length**: Kept lessons concise (estimated 3 minutes each) assuming busy homebuyers have limited attention spans
+- **Lesson Length**: Kept lessons concise (estimated 5-7 minutes each) assuming busy homebuyers have limited attention spans
 - **Difficulty Level**: Designed for complete beginners with no prior real estate knowledge
 - **Question Format**: Used multiple choice exclusively for simplicity and clear right/wrong feedback
 
