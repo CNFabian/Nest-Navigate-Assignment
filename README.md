@@ -134,5 +134,5 @@ src/
 - **Question Format**: Used multiple choice exclusively for simplicity and clear right/wrong feedback
 
 
-**Time Spent**: Approximately 6-8 hours  
+**Time Spent**: Approximately 8-9 hours  
 **Focus Areas**: Clean code architecture, responsive design, user experience, and gamification elements
