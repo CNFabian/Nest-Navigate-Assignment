@@ -2,6 +2,22 @@ import React, { useEffect, useRef } from 'react'
 import { CheckCircle, X, HelpCircle, AlertTriangle } from 'lucide-react'
 import Header from '../Header'
 import { lessonData } from '../../data/lessonData'
+import lesson01Image from '../../assets/lesson-images/lesson-01.jpg'
+import lesson02Image from '../../assets/lesson-images/lesson-02.jpg'
+import lesson03Image from '../../assets/lesson-images/lesson-03.jpg'
+
+const getLessonImage = (lessonNumber) => {
+  switch (lessonNumber) {
+    case 1:
+      return lesson01Image;
+    case 2:
+      return lesson02Image;
+    case 3:
+      return lesson03Image;
+    default:
+      return null;
+  }
+};
 
 const LessonView = ({ 
   coins, 
@@ -20,6 +36,7 @@ const LessonView = ({
   isStandalone = false
 }) => {
   const prevLessonRef = useRef(currentLesson)
+  
   
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -214,23 +231,23 @@ const LessonContent = ({
         </div>
         
         <div className={`flex flex-col lg:flex-row lg:space-x-6 mb-6 sm:mb-8 space-y-4 lg:space-y-0 ${!isSidebar ? 'animate-fadeIn' : ''}`} style={!isSidebar ? {animationDelay: '0.1s'} : {}}>
-          <div className="w-full lg:w-48 h-32 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
-            <img 
-              src={`/src/assets/lesson-images/lesson-0${currentLesson}.jpg`}
-              alt={`${lesson.title} illustration`}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextElementSibling.style.display = 'flex';
-              }}
-            />
-            <div className="w-full h-full bg-gray-100 border-2 border-dashed border-gray-300 items-center justify-center text-center text-gray-500 hidden">
-              <div>
-                <div className="text-2xl mb-2">🏠</div>
-                <div className="text-xs">Image not found</div>
-              </div>
+         <div className="w-48 h-32 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+          <img 
+            src={getLessonImage(currentLesson)}
+            alt={`${lesson.title} illustration`}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextElementSibling.style.display = 'flex';
+            }}
+          />
+          <div className="w-full h-full bg-gray-100 border-2 border-dashed border-gray-300 items-center justify-center text-center text-gray-500 hidden">
+            <div>
+              <div className="text-2xl mb-2">🏠</div>
+              <div className="text-xs">Image not found</div>
             </div>
           </div>
+        </div>
           
           <div className="prose prose-sm sm:prose-lg flex-1">
             <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
